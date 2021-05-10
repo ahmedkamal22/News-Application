@@ -1,10 +1,11 @@
-package com.kamal.newsapplication
+package com.kamal.newsapplication.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.kamal.newsapplication.R
 
 class SplachActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,7 @@ class SplachActivity : AppCompatActivity() {
     }
 
     private fun goToHome() {
-        val intent = Intent(this,HomeActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
     }

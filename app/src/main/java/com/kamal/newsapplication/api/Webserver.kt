@@ -11,4 +11,10 @@ interface Webserver {
                        @Query("language")language:String,
                        @Query("country")country:String
     ):Call<SourcesResponse>
+
+    @GET("everything")
+    fun getAllNews(@Query("apiKey")apiKey:String,
+                       @Query("language")language:String,
+                       @Query("sources")sources:String
+    ):Call<NewsResponse>
 }
