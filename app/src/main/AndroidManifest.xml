@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.NewsApplication">
-        <activity android:name=".ui.HomeActivity" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".ui.home.HomeActivity" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         </activity>
         <activity android:name=".ui.SplachActivity" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>

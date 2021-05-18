@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.kamal.newsapplication.R
+import com.kamal.newsapplication.ui.home.HomeActivity
 
 class SplachActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
