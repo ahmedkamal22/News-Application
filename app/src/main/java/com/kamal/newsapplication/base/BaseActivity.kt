@@ -1,11 +1,26 @@
 package com.example.islami.base
 
 import android.content.DialogInterface
+import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.ViewModel
 
-open class BaseActivity:AppCompatActivity(){
+abstract class BaseActivity<DB:ViewDataBinding,VM:ViewModel>:AppCompatActivity(){
+    lateinit var viewDataBinding: DB
+    lateinit var viewModel: VM
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewDataBinding = DataBindingUtil.setContentView(this,getLayoutID())
+        viewModel = intializeViewModel()
+    }
+
+    abstract fun intializeViewModel(): VM
+
+    abstract fun getLayoutID(): Int
 
     fun makeToast(message:String)
     {
