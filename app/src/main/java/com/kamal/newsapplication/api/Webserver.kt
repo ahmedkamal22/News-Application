@@ -7,10 +7,10 @@ import retrofit2.http.Query
 interface Webserver {
 
     @GET("sources")
-    fun getNewsSources(@Query("apiKey")apiKey:String,
+    suspend fun getNewsSources(@Query("apiKey")apiKey:String,
                        @Query("language")language:String,
                        @Query("country")country:String
-    ):Call<SourcesResponse>
+    ):SourcesResponse
 
     @GET("everything")
     fun getAllNews(@Query("apiKey")apiKey:String,
