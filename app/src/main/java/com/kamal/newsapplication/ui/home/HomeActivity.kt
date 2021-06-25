@@ -13,11 +13,12 @@ import com.kamal.newsapplication.adapters.NewsAdapter
 import com.kamal.newsapplication.api.*
 import com.kamal.newsapplication.databinding.ActivityHomeBinding
 import com.kamal.newsapplication.ui.Constants
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+@AndroidEntryPoint
 class HomeActivity : BaseActivity<ActivityHomeBinding,HomeViewModel>() ,TabLayout.OnTabSelectedListener{
     lateinit var newsAdapter: NewsAdapter
     override fun intializeViewModel(): HomeViewModel {
